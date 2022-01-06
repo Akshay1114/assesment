@@ -1,0 +1,18 @@
+.header{
+    background-color: rgb(246 248 250);
+    padding: 0.8rem;
+}
+
+.header span {
+    color: #979797;
+}
+.tab{
+    display: flex;
+    justify-content: space-between;
+}
+.tab a{
+    color: #6a6767;
+    padding: 0 0.5rem;
+    border-right: 1px solid grey;
+display: inline-block;
+}

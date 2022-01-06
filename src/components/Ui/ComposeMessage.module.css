@@ -1,0 +1,64 @@
+.message_area{
+    display: flex;
+    padding: 10px;
+}
+.profile_image{
+    border-radius: 100%;
+    width: 65px;
+    margin-right: 0.67rem;
+}
+.message_area input{
+    width: 100%;
+    border: none;
+    padding: 0.6rem;
+}
+.message_area input:focus,.message_area input:active{
+    border: 0;
+    outline: none;
+}
+.message_area input:focus-visible{
+    border: 0;
+    outline: none;
+}
+.tabs{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.tabs div{
+    background-color: rgb(246 248 250);
+    padding: 10px 20px;
+    border-radius: 9px;
+    width: 40%;
+    margin-bottom: 15px;
+    cursor: pointer;
+    display: flex;
+}
+.tabs img{
+    width: 26px;
+    margin-right: 10px;
+}
+.modal{
+    border: 1px solid grey;
+    width: 403px;
+    padding: 0.65rem;
+    overflow: auto;
+    height: 233px;
+    position: absolute;
+    background-color: #fff;
+ 
+}
+.modal input{
+    width: 90%;
+    padding: 0.3rem;
+    margin-bottom: 0.6rem;
+    border-radius: 4px;
+    width: 97%;
+}
+.showgig{
+    padding: 1.2rem;
+    text-align: center;
+}
+.showgig img{
+    width: 100%;
+}
