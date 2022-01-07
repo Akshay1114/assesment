@@ -3,7 +3,7 @@ import classes from './Footer.module.css'
 function Footer(props) {
     const handlePost = ()=>{
         console.log("click")
-        props.postHandle()
+        props.handlePost()
     }
     return (
         <div className={classes.footer}>

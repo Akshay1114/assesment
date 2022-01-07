@@ -6,12 +6,15 @@ import gifImg from "../../assets/images/gif.png"
 import tagFriend from '../../assets/images/tag.png'
 import checkIn from '../../assets/images/placeholder.png'
 import tagEvent from '../../assets/images/planner.png'
+import Footer from "./Footer";
 
-const ComposeMessage = () => {
+const ComposeMessage = (props) => {
   const [message, setMessage] = useState("");
   const [modal, setModal] = useState(false);
   const [data, setData] = useState("");
   const [showGif, setGif] = useState("");
+  const [postMsgData, setPostData] = useState([]);
+  const [post, setPost] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -49,8 +52,21 @@ const ComposeMessage = () => {
   const handleSelectGif = (data) => {
     // console.log("click", e)
     setGif(data?.images?.fixed_height?.url);
+    
     setModal(!modal)
   };
+
+  const handlePost = (e)=>{
+  //  console.log({gif :showGif, name :message})
+  // console.log(postMsgData)
+
+    setPostData([{name:message,gif : showGif}])
+  setGif("")
+  setMessage("")
+
+  }
+  console.log(postMsgData)
+
   return (
     <>
       <div className={classes.message_area}>
@@ -84,6 +100,16 @@ const ComposeMessage = () => {
           ))}
         </div>
       )}
+      {/* <button onClick={handlePost}>Post</button> */}
+      <Footer handlePost = {handlePost} />
+      {postMsgData?.map(data=>
+      <div className={classes.postedMsg}>
+        <div className={classes.postedtext}>
+        <img className={classes.profile_image} src={ProfileImg} />
+        <p>{data?.name}</p>
+        </div>
+        <img className={classes.postedImg} src={data?.gif} />
+      </div>)}
     </>
   );
 };

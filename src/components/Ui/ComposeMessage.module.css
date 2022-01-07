@@ -62,3 +62,22 @@
 .showgig img{
     width: 100%;
 }
+.postedMsg{
+    text-align: left;
+    width: auto;
+    background-color: #f1eeee;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 8.6px;
+}
+.postedtext{
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+.postedImg{
+    display: block;
+    margin-left: auto;
+    width: 100%;
+    max-width: 90%;
+    object-fit: contain;
+}
